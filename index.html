@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather App</title>
+    <link href="./output.css" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <style>
+    .body {
+      font-family: "Montserrat", sans-serif;
+      font-optical-sizing: auto;
+      font-weight: normal;
+      font-style: normal;
+    }
+
+    .weather-box {
+      display: none;
+    }
+  </style>
+  <body class="bg-[#222]">
+    <div
+      class="w-80 h-auto py-4 mx-auto my-32 bg-gradient-to-br from-[#7ff1db] to-[#088169] rounded"
+    >
+      <div class="searchBox flex items-center justify-between mx-6 py-4">
+        <input
+          class="w-56 px-2 py-1.5 rounded-full text-[9px] focus:outline-none focus:text-gray-400"
+          placeholder="Enter City Name....."
+          type="text"
+          name=""
+          id=""
+        />
+        <button>
+          <img
+            class="h-8 px-2 py-2 rounded-full cursor-pointer bg-white"
+            src="/images/search.png"
+            alt=""
+          />
+        </button>
+      </div>
+      <div class="error hidden text-sm text-white text-center mt-2">
+        <p>Invalid City Name</p>
+      </div>
+      <div class="weather-box">
+        <div
+          class="current-weather flex flex-col items-center justify-center mt-4"
+        >
+          <img
+            class="weather-icon w-32 h-32"
+            src="./images/rain.png"
+            alt="Rain"
+          />
+          <h1 class="temp text-lg font-semibold text-white">22°C</h1>
+          <h1 class="city text-lg font-semibold text-white">New York</h1>
+        </div>
+        <div
+          class="weather-detials flex items-center justify-between mx-6 mt-12"
+        >
+          <div class="flex gap-2 items-center">
+            <img
+              class="w-10 h-10 py-1"
+              src="/images/humidity.png"
+              alt="Humidity"
+            />
+            <div>
+              <h1 class="humidity text-sm font-semibold text-white">65%</h1>
+              <h1 class="text-sm font-semibold text-white">Humidity</h1>
+            </div>
+          </div>
+          <div class="flex gap-2 items-center">
+            <img class="w-10 h-10 py-1" src="/images/wind.png" alt="Wind" />
+            <div>
+              <h1 class="wind text-sm font-semibold text-white">15 km/h</h1>
+              <h1 class="text-sm font-semibold text-white">Wind</h1>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="main.js"></script>
+  </body>
+</html>
